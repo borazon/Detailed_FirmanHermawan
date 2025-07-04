@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Entry Telkomsel - Firman Hermawan</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'primary': '#1e40af',
+                        'secondary': '#64748b',
+                        'accent': '#3b82f6',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-inter bg-gray-50 dark:bg-gray-900">
+
+    <!-- Navigation -->
+    <nav
+        class="fixed top-0 left-0 right-0 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm z-50 border-b border-gray-200 dark:border-gray-700">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-2xl font-bold text-gray-900 dark:text-white">
+                        <span class="text-primary">Firman</span> Hermawan
+                    </a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="index.html" class="text-gray-600 dark:text-gray-300 hover:text-primary transition-colors">
+                        <!-- <i data-feather="arrow-left" class="w-5 h-5 inline mr-2"></i>
+                        Back -->
+                    </a>
+                    <button id="theme-toggle"
+                        class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                        <i data-feather="sun" class="w-5 h-5 dark:hidden"></i>
+                        <i data-feather="moon" class="w-5 h-5 hidden dark:block dark:text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Hero -->
+    <section class="pt-24 pb-16 bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-800 dark:to-gray-900">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <div class="bg-blue-600 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                    <i data-feather="monitor" class="w-10 h-10 text-white"></i>
+                </div>
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">Freelance Data Entry
+                    Telkomsel</h1>
+                <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-8">
+                    Completed the data entry process with high speed and accuracy, ensuring data integrity and readiness
+                    for further analysis.
+                </p>
+                <div class="flex flex-wrap justify-center gap-3 mb-8">
+                    <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">Web
+                        Company</span>
+                    <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">Microsoft
+                        Excel</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Details -->
+    <section class="py-16 bg-white dark:bg-gray-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Project Info -->
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-6">Project Overview</h2>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">
+                        I assisted in completing the manual input of
+                        monthly sales data from the company’s internal website into Microsoft Excel, to prepare the
+                        data for further analysis by the respective team.
+
+                        In total, I handled over 10,000 rows of data, requiring a high level of accuracy and
+                        attention to detail to ensure the integrity of the dataset for reliable analysis.
+                    </p>
+                    <div class="space-y-6">
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Project Duration</h3>
+                            <p class="text-gray-600 dark:text-gray-300">1 Day (January 2024 - March 2024)</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Team Size</h3>
+                            <p class="text-gray-600 dark:text-gray-300">Solo project</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Role</h3>
+                            <p class="text-gray-600 dark:text-gray-300">Data Entry</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Screenshots/Demo -->
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-6">Targets Final </h2>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <div class="bg-green-100 p-2 rounded-lg">
+                                <i data-feather="check" class="w-5 h-5 text-green-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 dark:text-white">Maintained 100% data accuracy
+                                </h4>
+                                <p class="text-gray-600 dark:text-gray-300">Successfully completed the data entry
+                                    process with 100% accuracy from the company’s website into Microsoft Excel, ensuring
+                                    the data was ready for further analysis without the need for additional corrections.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="bg-green-100 p-2 rounded-lg">
+                                <i data-feather="check" class="w-5 h-5 text-green-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 dark:text-white">Completed the task within the
+                                    assigned deadline</h4>
+                                <p class="text-gray-600 dark:text-gray-300">Successfully completed the task thoroughly
+                                    and error-free, ahead of the assigned deadline.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Details -->
+    <section class="py-16 bg-gray-50 dark:bg-gray-900">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-gray-900 dark:text-white text-center mb-12">Tools Implementation</h2>
+
+            <div class="grid lg:grid-cols-2 gap-16">
+                <!-- WebApp -->
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg">
+                    <div class="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                        <i data-feather="globe" class="w-6 h-6 text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">WebApp Company</h3>
+                    <ul class="space-y-2 text-gray-600 dark:text-gray-300">
+                        <li>• Extract Data From Database</li>
+                        <li>• Check Data From Any Sales</li>
+                        <li>• Copy Data To Excel</li>
+                    </ul>
+                </div>
+
+                <!-- Microsoft Excel -->
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg">
+                    <div class="bg-green-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                        <i data-feather="file-text" class="w-6 h-6 text-green-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Microsoft Excel</h3>
+                    <ul class="space-y-2 text-gray-600 dark:text-gray-300">
+                        <li>• Create Sheet For Copy Data From WebApp</li>
+                        <li>• Create Data Table</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results -->
+    <section class="py-16 bg-gradient-to-br from-green-50 to-emerald-100 dark:from-gray-800 dark:to-gray-900">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-12">Project Results</h2>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg">
+                    <div class="text-2xl font-bold text-green-600 mb-2">Moderately Satisfied</div>
+                    <p class="text-gray-600 dark:text-gray-300">Customer Review</p>
+                </div>
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg">
+                    <div class="text-3xl font-bold text-blue-600 mb-2">6h</div>
+                    <p class="text-gray-600 dark:text-gray-300">Duration Finish</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; 2025 Firman Hermawan. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <!-- <script>
+        feather.replace();
+
+        // Initialize dark mode for this page
+        document.addEventListener('DOMContentLoaded', function () {
+            // Dark mode functionality
+            const themeToggle = document.getElementById('theme-toggle');
+            const html = document.documentElement;
+
+            // Check for saved theme preference or default to light mode
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            if (savedTheme === 'dark') {
+                html.classList.add('dark');
+            }
+
+            themeToggle.addEventListener('click', function () {
+                html.classList.toggle('dark');
+
+                // Save preference
+                const currentTheme = html.classList.contains('dark') ? 'dark' : 'light';
+                localStorage.setItem('theme', currentTheme);
+
+                // Show toast notification
+                showToast(`Switched to ${currentTheme} mode`, 'success');
+            });
+        });
+    </script> -->
+</body>
+
+</html>

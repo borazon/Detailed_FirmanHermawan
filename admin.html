@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - CV Website</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-200">
+    
+    <!-- Header -->
+    <header class="bg-white dark:bg-gray-800 shadow-sm border-b border-gray-200 dark:border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-4">
+                    <h1 class="text-2xl font-bold text-gray-900 dark:text-white">Admin Dashboard</h1>
+                    <span class="text-sm text-gray-500 dark:text-gray-400">CV Website Analytics</span>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button id="theme-toggle" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+                        <i data-feather="sun" class="w-5 h-5 dark:hidden"></i>
+                        <i data-feather="moon" class="w-5 h-5 hidden dark:block"></i>
+                    </button>
+                    <a href="index.html" class="text-blue-600 hover:text-blue-700 font-medium">
+                        <i data-feather="arrow-left" class="w-4 h-4 inline mr-1"></i>
+                        Back to Website
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        
+        <!-- Stats Overview -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg">
+                <div class="flex items-center">
+                    <div class="bg-blue-100 dark:bg-blue-900 p-3 rounded-lg">
+                        <i data-feather="users" class="w-6 h-6 text-blue-600 dark:text-blue-400"></i>
+                    </div>
+                    <div class="ml-4">
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Total Visitors</h3>
+                        <p id="visitors-count" class="text-2xl font-bold text-blue-600 dark:text-blue-400">-</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg">
+                <div class="flex items-center">
+                    <div class="bg-green-100 dark:bg-green-900 p-3 rounded-lg">
+                        <i data-feather="download" class="w-6 h-6 text-green-600 dark:text-green-400"></i>
+                    </div>
+                    <div class="ml-4">
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">CV Downloads</h3>
+                        <p id="downloads-count" class="text-2xl font-bold text-green-600 dark:text-green-400">-</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg">
+                <div class="flex items-center">
+                    <div class="bg-purple-100 dark:bg-purple-900 p-3 rounded-lg">
+                        <i data-feather="mail" class="w-6 h-6 text-purple-600 dark:text-purple-400"></i>
+                    </div>
+                    <div class="ml-4">
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Contact Messages</h3>
+                        <p id="messages-count" class="text-2xl font-bold text-purple-600 dark:text-purple-400">-</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Submissions -->
+        <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 mb-8">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-xl font-semibold text-gray-900 dark:text-white">Contact Submissions</h2>
+                <button id="refresh-data" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-colors">
+                    <i data-feather="refresh-cw" class="w-4 h-4 inline mr-2"></i>
+                    Refresh
+                </button>
+            </div>
+            
+            <div class="overflow-x-auto">
+                <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                    <thead class="bg-gray-50 dark:bg-gray-700">
+                        <tr>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Name</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Email</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Subject</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Date</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="contact-submissions" class="bg-white dark:bg-gray-800 divide-y divide-gray-200 dark:divide-gray-700">
+                        <!-- Data will be loaded here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Recent Visitors -->
+        <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6">
+            <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-6">Recent Visitor Activity</h2>
+            
+            <div class="overflow-x-auto">
+                <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                    <thead class="bg-gray-50 dark:bg-gray-700">
+                        <tr>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Visitor ID</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Page</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">User Agent</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Visit Time</th>
+                        </tr>
+                    </thead>
+                    <tbody id="visitor-analytics" class="bg-white dark:bg-gray-800 divide-y divide-gray-200 dark:divide-gray-700">
+                        <!-- Data will be loaded here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Dark mode functionality
+        const themeToggle = document.getElementById('theme-toggle');
+        const html = document.documentElement;
+        
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        if (savedTheme === 'dark') {
+            html.classList.add('dark');
+        }
+        
+        themeToggle.addEventListener('click', function() {
+            html.classList.toggle('dark');
+            const currentTheme = html.classList.contains('dark') ? 'dark' : 'light';
+            localStorage.setItem('theme', currentTheme);
+            feather.replace();
+        });
+
+        // Load dashboard data
+        async function loadDashboardData() {
+            try {
+                // Load analytics summary (mock data for now)
+                document.getElementById('visitors-count').textContent = '5';
+                document.getElementById('downloads-count').textContent = '2';
+                document.getElementById('messages-count').textContent = '3';
+
+                // Load contact submissions (mock data)
+                const contactSubmissions = [
+                    { name: 'Jane Smith', email: 'jane@example.com', subject: 'Project Inquiry', created_at: '2025-01-02T10:30:00Z', status: 'unread' },
+                    { name: 'Mike Johnson', email: 'mike@techcorp.com', subject: 'Job Opportunity', created_at: '2025-01-02T09:15:00Z', status: 'read' },
+                    { name: 'Sarah Wilson', email: 'sarah@startup.io', subject: 'Collaboration', created_at: '2025-01-02T08:45:00Z', status: 'unread' }
+                ];
+
+                const contactTableBody = document.getElementById('contact-submissions');
+                contactTableBody.innerHTML = contactSubmissions.map(submission => `
+                    <tr>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">${submission.name}</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">${submission.email}</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">${submission.subject}</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">${new Date(submission.created_at).toLocaleString()}</td>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                            <span class="px-2 py-1 text-xs font-medium rounded-full ${submission.status === 'read' ? 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300' : 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300'}">
+                                ${submission.status === 'read' ? 'Read' : 'Unread'}
+                            </span>
+                        </td>
+                    </tr>
+                `).join('');
+
+                // Load visitor analytics (mock data)
+                const visitorAnalytics = [
+                    { visitor_id: 'visitor_001', page_view: '/', user_agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)', visited_at: '2025-01-02T11:00:00Z' },
+                    { visitor_id: 'visitor_002', page_view: '/', user_agent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)', visited_at: '2025-01-02T10:45:00Z' },
+                    { visitor_id: 'visitor_003', page_view: '/', user_agent: 'Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1)', visited_at: '2025-01-02T10:30:00Z' }
+                ];
+
+                const visitorTableBody = document.getElementById('visitor-analytics');
+                visitorTableBody.innerHTML = visitorAnalytics.map(visit => `
+                    <tr>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">${visit.visitor_id}</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">${visit.page_view}</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">${visit.user_agent.substring(0, 50)}...</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">${new Date(visit.visited_at).toLocaleString()}</td>
+                    </tr>
+                `).join('');
+
+            } catch (error) {
+                console.error('Error loading dashboard data:', error);
+            }
+        }
+
+        // Refresh button functionality
+        document.getElementById('refresh-data').addEventListener('click', function() {
+            this.innerHTML = '<i data-feather="loader" class="w-4 h-4 inline mr-2 animate-spin"></i>Refreshing...';
+            this.disabled = true;
+            
+            setTimeout(() => {
+                loadDashboardData();
+                this.innerHTML = '<i data-feather="refresh-cw" class="w-4 h-4 inline mr-2"></i>Refresh';
+                this.disabled = false;
+                feather.replace();
+            }, 1000);
+        });
+
+        // Load data on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            loadDashboardData();
+            feather.replace();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataViz Job Vacancy - Firman Hermawan</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'primary': '#1e40af',
+                        'secondary': '#64748b',
+                        'accent': '#3b82f6',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-inter bg-gray-50 dark:bg-gray-900">
+
+    <!-- Navigation -->
+    <nav
+        class="fixed top-0 left-0 right-0 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm z-50 border-b border-gray-200 dark:border-gray-700">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-2xl font-bold text-gray-900 dark:text-white">
+                        <span class="text-primary">Firman</span> Hermawan
+                    </a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button id="theme-toggle"
+                        class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                        <i data-feather="sun" class="w-5 h-5 dark:hidden"></i>
+                        <i data-feather="moon" class="w-5 h-5 hidden dark:block dark:text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Hero -->
+    <section class="pt-24 pb-16 bg-gradient-to-br from-purple-50 to-pink-100 dark:from-gray-800 dark:to-gray-900">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <div class="bg-purple-600 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                    <i data-feather="briefcase" class=" w-10 h-10 text-white"></i>
+                </div>
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">Job Vacancy Data
+                    Visualization Dashboard — 2022</h1>
+                <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-8">
+                    Showcasing trends in job postings by industry
+                    sector, location, job type, and required skills throughout 2022 from Jobstreet.
+                </p>
+                <div class="flex flex-wrap justify-center gap-3 mb-8">
+                    <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">PostgreSQL</span>
+                    <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-medium">Looker
+                        Studio</span>
+                </div>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="https://lookerstudio.google.com/reporting/cc6ad244-1b29-4fc2-9d16-5231acc83660"
+                        target="_blank" rel="noopener noreferrer"
+                        class="bg-primary text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium">
+                        <i data-feather="external-link" class="w-5 h-5 inline mr-2"></i>
+                        Live Dashboard
+                    </a>
+                    <a href="https://github.com/borazon/SQL_Jobstreet/blob/main/jobstreet.sql" target="_blank"
+                        rel="noopener noreferrer"
+                        class="bg-gray-800 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors font-medium">
+                        <i data-feather="github" class="w-5 h-5 inline mr-2"></i>
+                        View Code
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Details -->
+    <section class="py-16 bg-white dark:bg-gray-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Project Info -->
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-6">Project Overview</h2>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">
+                        This project aims to analyze job vacancy data throughout <span class="font-bold">2022</span>
+                        sourced from the <span class="font-bold">Jobstreet</span>
+                        platform. The main focus is to identify the most in-demand job roles, the most active industry
+                        sectors, and the companies with the highest number of job postings.
+                    </p>
+                    <div class="space-y-6">
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Project Duration</h3>
+                            <p class="text-gray-600 dark:text-gray-300">2 Day (29 June 2024 - 30 June 2024)</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Team Size</h3>
+                            <p class="text-gray-600 dark:text-gray-300">Solo</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Role</h3>
+                            <p class="text-gray-600 dark:text-gray-300">Data Analyze & Data Visualization</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Key Features -->
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-6">Key Features</h2>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <div class="bg-green-100 p-2 rounded-lg">
+                                <i data-feather="pie-chart" class="w-5 h-5 text-green-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 dark:text-white">Interactive Charts</h4>
+                                <p class="text-gray-600 dark:text-gray-300">Multiple chart types</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="bg-green-100 p-2 rounded-lg">
+                                <i data-feather="layout" class="w-5 h-5 text-green-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 dark:text-white">Customizable Widgets</h4>
+                                <p class="text-gray-600 dark:text-gray-300">Drag-and-drop dashboard builder with saved
+                                    layouts</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="bg-green-100 p-2 rounded-lg">
+                                <i data-feather="download" class="w-5 h-5 text-green-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 dark:text-white">Export Capabilities</h4>
+                                <p class="text-gray-600 dark:text-gray-300">PDF export options for
+                                    reports</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Details -->
+    <section class="py-16 bg-gray-50 dark:bg-gray-900">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-gray-900 dark:text-white text-center mb-12">Technical Implementation</h2>
+
+            <div class="grid lg:grid-cols-2 gap-16">
+                <!-- Visualization -->
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg">
+                    <div class="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                        <i data-feather="pie-chart" class="w-6 h-6 text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Visualiaztion</h3>
+                    <ul class="space-y-2 text-gray-600 dark:text-gray-300">
+                        <li>• Looker Studio Dashboard Visualization</li>
+                        <li>• Filtering Data Visualiaztion</li>
+                    </ul>
+                </div>
+
+                <!-- Data &Infrastructure -->
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg">
+                    <div class="bg-orange-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                        <i data-feather="database" class="w-6 h-6 text-orange-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Data & Infrastructure</h3>
+                    <ul class="space-y-2 text-gray-600 dark:text-gray-300">
+                        <li>• BigquerySQL database</li>
+                        <li>• Data Procces</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Screenshots -->
+    <section class="py-16 bg-white dark:bg-gray-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-gray-900 dark:text-white text-center mb-12">Visualization Types</h2>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div
+                        class="bg-gradient-to-br from-purple-100 to-pink-100 dark:from-purple-900/30 dark:to-pink-900/30 p-8 rounded-xl mb-4">
+                        <i data-feather="map" class="w-16 h-16 text-purple-600 mx-auto"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Heatmap Chart</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-300">The heatmap highlights areas with the highest
+                        number of job openings based on geographic location.
+                    </p>
+                </div>
+
+                <div class="text-center">
+                    <div
+                        class="bg-gradient-to-br from-blue-100 to-indigo-100 dark:from-blue-900/30 dark:to-indigo-900/30 p-8 rounded-xl mb-4">
+                        <i data-feather="list" class="w-16 h-16 text-blue-600 mx-auto"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-900 dark:text-white mb-2">List Table</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-300">This list provides detailed information for each
+                        region highlighted on the heatmap.</p>
+                </div>
+
+                <div class="text-center">
+                    <div
+                        class="bg-gradient-to-br from-green-100 to-emerald-100 dark:from-green-900/30 dark:to-emerald-900/30 p-8 rounded-xl mb-4">
+                        <i data-feather="pie-chart" class="w-16 h-16 text-green-600 mx-auto"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Donut-Chart</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-300">This donut chart displays the most in-demand job
+                        categories based on company postings.</p>
+                </div>
+
+                <div class="text-center">
+                    <div
+                        class="bg-gradient-to-br from-orange-100 to-red-100 dark:from-orange-900/30 dark:to-red-900/30 p-8 rounded-xl mb-4">
+                        <i data-feather="bar-chart-2" class="w-16 h-16 text-orange-600 mx-auto"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Bar-Chart</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-300">This bar chart serves as supporting data to
+                        identify the companies with the highest number of job postings.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; 2025 Firman Hermawan. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+
+</html>

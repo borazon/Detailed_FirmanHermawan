@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics Dashboard - Firman Hermawan</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'primary': '#1e40af',
+                        'secondary': '#64748b',
+                        'accent': '#3b82f6',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-inter bg-gray-50 dark:bg-gray-900">
+
+    <!-- Navigation -->
+    <nav
+        class="fixed top-0 left-0 right-0 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm z-50 border-b border-gray-200 dark:border-gray-700">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-2xl font-bold text-gray-900 dark:text-white">
+                        <span class="text-primary">Firman</span> Hermawan
+                    </a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button id="theme-toggle"
+                        class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                        <i data-feather="sun" class="w-5 h-5 dark:hidden"></i>
+                        <i data-feather="moon" class="w-5 h-5 hidden dark:block dark:text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Hero -->
+    <section class="pt-24 pb-16 bg-gradient-to-br from-green-50 to-emerald-100 dark:from-gray-800 dark:to-gray-900">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <div class="bg-green-600 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                    <i data-feather="bar-chart-2" class="w-10 h-10 text-white"></i>
+                </div>
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">Analytics Dashboard(Dummy)
+                </h1>
+                <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-8">
+                    Analyzed and created data visualizations to observe sales trends, assisting the team in
+                    understanding sales pattern shifts and supporting more informed business decision-making.
+                </p>
+                <div class="flex flex-wrap justify-center gap-3 mb-8">
+                    <span
+                        class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">BigquerySQL</span>
+                    <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-medium">Looker
+                        Studio</span>
+                </div>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="#"
+                        class="bg-primary text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium">
+                        <i data-feather="github" class="w-5 h-5 inline mr-2"></i>
+                        View Code
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard Image Section -->
+    <section class="bg-white dark:bg-gray-900 py-12">
+        <div class="max-w-5xl mx-auto px-4 text-center">
+            <h2 class="text-2xl md:text-3xl font-semibold text-gray-900 dark:text-white mb-6">Dashboard of Sales</h2>
+            <img src="assets/dashboard.jpg" alt="Sales Dashboard"
+                class="mx-auto rounded-xl shadow-lg border dark:border-gray-700">
+        </div>
+    </section>
+
+    <!-- Project Details -->
+    <section class="py-16 bg-white dark:bg-gray-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Project Info -->
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-6">Project Overview</h2>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">
+                        This analysis aims to observe smartphone sales trends during the year, in order to understand
+                        shifts in consumer behavior and market performance. Based on the data findings, a discussion
+                        will be conducted to determine effective strategies to increase sales, such as product
+                        optimization, promotional efforts, or more targeted market segmentation.
+                    </p>
+                    <p class="text-gray-600 dark:text-gray-300 mb-8">
+                        The platform processes large datasets efficiently and presents them through intuitive
+                        visualizations, helping stakeholders make data-driven decisions quickly and effectively.
+                    </p>
+
+                    <div class="space-y-6">
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Project Duration</h3>
+                            <p class="text-gray-600 dark:text-gray-300">1 Week (18 January 2024 - 25 January 2024)</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Team Size</h3>
+                            <p class="text-gray-600 dark:text-gray-300">Solo </p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Role</h3>
+                            <p class="text-gray-600 dark:text-gray-300">Data Analyze & Data Visualization
+                                Specialist</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Key Features -->
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-6">Key Features</h2>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <div class="bg-green-100 p-2 rounded-lg">
+                                <i data-feather="pie-chart" class="w-5 h-5 text-green-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 dark:text-white">Interactive Charts</h4>
+                                <p class="text-gray-600 dark:text-gray-300">Multiple chart types</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="bg-green-100 p-2 rounded-lg">
+                                <i data-feather="layout" class="w-5 h-5 text-green-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 dark:text-white">Customizable Widgets</h4>
+                                <p class="text-gray-600 dark:text-gray-300">Drag-and-drop dashboard builder with saved
+                                    layouts</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="bg-green-100 p-2 rounded-lg">
+                                <i data-feather="download" class="w-5 h-5 text-green-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 dark:text-white">Export Capabilities</h4>
+                                <p class="text-gray-600 dark:text-gray-300">PDF export options for
+                                    reports</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Details -->
+    <section class="py-16 bg-gray-50 dark:bg-gray-900">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-gray-900 dark:text-white text-center mb-12">Technical Implementation</h2>
+
+            <div class="grid lg:grid-cols-2 gap-16">
+                <!-- Backend -->
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg">
+                    <div class="bg-purple-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                        <i data-feather="bar-chart" class="w-6 h-6 text-purple-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Visualiaztion</h3>
+                    <ul class="space-y-2 text-gray-600 dark:text-gray-300">
+                        <li>• Looker Studio to Make it Dashboard Visualization</li>
+                        <li>• Filtering Data Visualiaztion</li>
+                    </ul>
+                </div>
+
+                <!-- Data & Infrastructure -->
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg">
+                    <div class="bg-yellow-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                        <i data-feather="database" class="w-6 h-6 text-yellow-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Data & Infrastructure</h3>
+                    <ul class="space-y-2 text-gray-600 dark:text-gray-300">
+                        <li>• BigquerySQL database</li>
+                        <li>• Data Procces</li>
+                        <li>• Data Cleanup</li>
+                        <li>• Data Filtering</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Data Visualization Examples -->
+    <section class="py-16 bg-white dark:bg-gray-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-gray-900 dark:text-white text-center mb-12">Visualization Types</h2>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="bg-blue-100 dark:bg-blue-900/30 p-6 rounded-xl mb-4">
+                        <i data-feather="bar-chart" class="w-12 h-12 text-blue-600 mx-auto"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Bar Chart</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-300">Compared market segments to understand
+                        differences in customer behavior and sales trends.</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="bg-green-100 dark:bg-green-900/30 p-6 rounded-xl mb-4">
+                        <i data-feather="trending-up" class="w-12 h-12 text-green-600 mx-auto"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Line Charts</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-300">Analyzing the average price data for each
+                        segment to understand market value differences across product groups.</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="bg-purple-100 dark:bg-purple-900/30 p-6 rounded-xl mb-4">
+                        <i data-feather="pie-chart" class="w-12 h-12 text-purple-600 mx-auto"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Pie Charts</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-300">Total sales data from all product categories
+                        excluding smartphones.
+                    </p>
+                </div>
+                <!-- Name chart ambil nanti -->
+                <!-- <div class="text-center">
+                    <div class="bg-orange-100 dark:bg-orange-900/30 p-6 rounded-xl mb-4">
+                        <i data-feather="map" class="w-12 h-12 text-orange-600 mx-auto"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Heatmaps</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-300">Geographic and correlation data visualization
+                    </p>
+                </div> -->
+
+                <div class="text-center">
+                    <div class="bg-red-100 dark:bg-red-900/30 p-6 rounded-xl mb-4">
+                        <i data-feather="list" class="w-12 h-12 text-red-600 mx-auto"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Table</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-300">Displayed sales data of various products.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Challenges & Solutions -->
+    <section class="py-16 bg-gray-50 dark:bg-gray-900">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-gray-900 dark:text-white text-center mb-12">Challenges & Solutions</h2>
+
+            <div class="grid lg:grid-cols-1 gap-8">
+                <div class="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-xl">
+                    <h3 class="text-xl font-semibold text-blue-800 dark:text-blue-200 mb-4">Challenge: Boosting luxury
+                        smartphone
+                        sales</h3>
+                    <p class="text-blue-700 dark:text-blue-300 mb-4">
+                        Based on the dashboard data, this segment recorded the lowest sales figures. Therefore, a
+                        well-formulated strategy is needed to drive its sales growth.
+                    </p>
+                    <h4 class="font-semibold text-blue-800 dark:text-blue-200 mb-2">Solution:</h4>
+                    <p class="text-blue-700 dark:text-blue-300">
+                        Given the substantial budget spent by customers, we can offer limited-quantity bonuses of
+                        equivalent value. Sales data from other categories (Accessories) shows that chargers, wireless
+                        headsets, and covers have relatively high sales contributions. These three items can serve as
+                        meaningful bonuses that match the customer’s investment, especially during pre-order periods or
+                        special promotional events.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; 2025 Firman Hermawan. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+
+</html>

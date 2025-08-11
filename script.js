@@ -133,8 +133,9 @@ document.addEventListener('DOMContentLoaded', function () {
             // Simulate PDF generation/download
             setTimeout(() => {
                 // In a real application, you would generate or fetch the actual PDF
-                const link = document.createElement('a');
-                link.href = 'https://drive.google.com/uc?export=download&id=1cdWVBReDvr3IzWRzBKoW6YST5yXgqOEi'; // Replace with actual PDF URL
+                const link = document.createElement('a');https://drive.google.com/file/d/1VdU3I_VFCNHlRBrHGn4jybjWEm9L8N0a/view?usp=sharing
+                link.href = 'https://drive.google.com/uc?export=download&id=1VdU3I_VFCNHlRBrHGn4jybjWEm9L8N0a';
+                // link.href = 'https://drive.google.com/uc?export=download&id=1cdWVBReDvr3IzWRzBKoW6YST5yXgqOEi'; // Replace with actual PDF URL
                 link.download = 'Firman_Hermawan_CV.pdf';
 
                 document.body.appendChild(link); // penting untuk Firefox dan beberapa browser lain
